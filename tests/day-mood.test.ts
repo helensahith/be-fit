@@ -1,0 +1,11 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { Challenge } from '../src/domain';
+import { dayMood } from '../src/day-mood';
+const date = '2026-11-01';
+const fixture = (): Challenge => ({ id: 'c', name: 'Pact', description: '', start: date, end: '2026-11-30', timezone: 'Asia/Kolkata', ownerId: 'a', invite: '', members: [{ id: 'a', name: 'A', joined: date }], payments: [], checkins: [], goals: [{ id: 'walk', title: 'Walk', frequency: 'daily', penalty: 50, target: 1, icon: '', description: '' }, { id: 'protein', title: 'Protein', frequency: 'daily', penalty: 0, target: 1, icon: '', description: '' }, { id: 'gym', title: 'Gym', frequency: 'weekly', penalty: 50, target: 5, icon: '', description: '' }] });
+test('pending goals today stay neutral and one completed daily goal shows progress', () => { const c = fixture(); assert.equal(dayMood(c, 'a', date, date).emoji, '🌱'); assert.equal(dayMood(c, 'a', date, date, { walk: true }).emoji, '😊'); });
+test('all daily goals completed celebrate even on a weekly rest day', () => { const c = fixture(); assert.equal(dayMood(c, 'a', date, date, { walk: true, protein: true, gym: false }).emoji, '🎉'); });
+test('misses get supportive feedback and closed unmarked days are not pending', () => { const c = fixture(); assert.equal(dayMood(c, 'a', date, date, { walk: false }).emoji, '😔'); assert.equal(dayMood(c, 'a', date, '2026-11-02').tone, 'gentle'); });
+test('draft changes override saved state without changing the stored record', () => { const c = fixture(); c.checkins.push({ userId: 'a', goalId: 'walk', date, done: false }); assert.equal(dayMood(c, 'a', date, date, { walk: true }).emoji, '😊'); assert.equal(c.checkins[0]!.done, false); });
+test('weekly-only rest days are never treated as daily misses', () => { const c = fixture(); c.goals = [c.goals[2]!]; assert.equal(dayMood(c, 'a', date, date, { gym: false }).tone, 'neutral'); c.goals[0]!.target = 1; c.checkins.push({ userId: 'a', goalId: 'gym', date, done: true }); assert.equal(dayMood(c, 'a', date, date, { gym: false }).emoji, '🌱'); assert.equal(dayMood(c, 'a', '2026-11-02', '2026-11-02', { gym: false }).emoji, '😌'); });

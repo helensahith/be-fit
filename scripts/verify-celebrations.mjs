@@ -1,0 +1,58 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ?? 'C:/Users/helen/AppData/Local/ms-playwright/chromium-1169/chrome-win/chrome.exe', headless: true });
+const errors = [];
+fs.mkdirSync('.impeccable/review', { recursive: true });
+try {
+  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'no-preference', timezoneId: 'Asia/Kolkata' });
+  const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
+  await page.goto('http://127.0.0.1:8082/#workspace');
+  await page.getByText('Small steps. Shared wins.', { exact: true }).waitFor();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 0, 'Loading does not celebrate');
+  await page.getByRole('button', { name: 'Done: Show up at the gym', exact: true }).click();
+  await page.getByTestId('confetti-particles').waitFor();
+  assert.equal(await page.getByTestId('celebration-feedback').evaluate(el => getComputedStyle(el).pointerEvents), 'none', 'Celebrations never block input');
+  await page.waitForTimeout(180);
+  await page.screenshot({ path: '.impeccable/review/celebration-desktop-20261101.png', fullPage: false });
+  await page.getByTestId('celebration-feedback').waitFor({ state: 'hidden', timeout: 3500 });
+  await page.getByRole('button', { name: 'Done: Show up at the gym', exact: true }).click();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 0, 'Repeated Done taps do not replay');
+  await page.getByRole('button', { name: 'Missed: Show up at the gym', exact: true }).click();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 0, 'A missed goal does not celebrate');
+  for (const title of ['Hit your protein goal', 'Skip outside food', 'Say no to added sugar', 'Get 10 minutes of cardio']) await page.getByRole('button', { name: `Done: ${title}`, exact: true }).click();
+  await page.getByText('Daily goals complete', { exact: true }).waitFor();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 1, 'Rapid completions share one bounded overlay');
+  await page.getByRole('button', { name: 'Save check-in', exact: true }).click();
+  await page.getByText('Check-in saved. Thanks for showing up.', { exact: true }).waitFor();
+  assert.ok(await page.getByTestId('confetti-particles').evaluate(el => el.childElementCount <= 48), 'Particles remain bounded');
+  await page.reload(); await page.getByText('Daily goals complete', { exact: true }).waitFor();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 0, 'Restoring a saved day does not celebrate');
+  await page.getByRole('tab', { name: 'Challenges', exact: true }).click();
+  await page.getByRole('button', { name: 'Open challenge', exact: true }).first().click();
+  const today = await page.evaluate(() => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()));
+  await page.getByRole('button', { name: `Done Show up at the gym on ${today}`, exact: true }).click();
+  await page.getByText('Goal complete. Nice work!', { exact: true }).waitFor();
+  await page.getByTestId('confetti-particles').waitFor();
+  await page.getByRole('button', { name: 'Be Fit home', exact: true }).click();
+  await page.getByRole('button', { name: 'Try the demo', exact: true }).first().click();
+  assert.equal(await page.getByTestId('celebration-feedback').count(), 0, 'Returning from Home does not replay a celebration');
+
+  const reducedContext = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', timezoneId: 'Asia/Kolkata' });
+  const reduced = await reducedContext.newPage(); reduced.on('pageerror', e => errors.push(e.message));
+  await reduced.goto('http://127.0.0.1:8082/#workspace');
+  await reduced.getByText('Let’s show up, Helen.', { exact: true }).waitFor();
+  await reduced.getByRole('button', { name: 'Done: Hit your protein goal', exact: true }).click();
+  await reduced.getByTestId('celebration-feedback').waitFor();
+  assert.equal(await reduced.getByTestId('confetti-particles').count(), 0, 'Reduced motion uses static feedback');
+  await reduced.screenshot({ path: '.impeccable/review/celebration-reduced-mobile-20261101.png', fullPage: false });
+  await reduced.getByTestId('celebration-feedback').waitFor({ state: 'hidden', timeout: 3500 });
+  await reduced.emulateMedia({ reducedMotion: 'no-preference' });
+  await reduced.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  assert.equal(await reduced.getByTestId('celebration-feedback').count(), 0, 'Preference changes do not replay old events');
+  await reduced.getByRole('button', { name: 'Done: Skip outside food', exact: true }).click();
+  await reduced.getByTestId('confetti-particles').waitFor();
+  assert.deepEqual(errors, []);
+  console.log('Celebrations passed: completion/save triggers, no repeat/reload replay, bounded particles, nonblocking controls, mood persistence, history edits, live reduced-motion changes.');
+} finally { await browser.close(); }

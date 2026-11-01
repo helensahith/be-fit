@@ -1,0 +1,1 @@
+{"expo":{"name":"Be Fit","slug":"be-fit","version":"1.0.0","orientation":"default","userInterfaceStyle":"light","web":{"bundler":"metro","output":"single","name":"Be Fit — Better together","description":"Shared fitness goals. Daily accountability. A little friendly competition."},"ios":{"supportsTablet":true},"android":{"package":"app.befit.challenges"}}}

@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+dist/
+.cache/
+.env
+.env.local
+playwright-report/
+test-results/
+.impeccable/review/
+*.tsbuildinfo

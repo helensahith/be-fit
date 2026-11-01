@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T03:37:17.247539+00:00",
+  "title": "Design System: Be Fit",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "displayName": "Canvas",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0054 117.92)",
+          "oklch(27% 0.0054 117.92)",
+          "oklch(39% 0.0054 117.92)",
+          "oklch(51% 0.0054 117.92)",
+          "oklch(63% 0.0054 117.92)",
+          "oklch(75% 0.0054 117.92)",
+          "oklch(87% 0.0054 117.92)",
+          "oklch(95% 0.0054 117.92)"
+        ]
+      },
+      "surface": {
+        "displayName": "Surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(27% 0.0000 89.88)",
+          "oklch(39% 0.0000 89.88)",
+          "oklch(51% 0.0000 89.88)",
+          "oklch(63% 0.0000 89.88)",
+          "oklch(75% 0.0000 89.88)",
+          "oklch(87% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "inset": {
+        "displayName": "Inset",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0111 123.46)",
+          "oklch(27% 0.0111 123.46)",
+          "oklch(39% 0.0111 123.46)",
+          "oklch(51% 0.0111 123.46)",
+          "oklch(63% 0.0111 123.46)",
+          "oklch(75% 0.0111 123.46)",
+          "oklch(87% 0.0111 123.46)",
+          "oklch(95% 0.0111 123.46)"
+        ]
+      },
+      "divider": {
+        "displayName": "Divider",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0128 126.38)",
+          "oklch(27% 0.0128 126.38)",
+          "oklch(39% 0.0128 126.38)",
+          "oklch(51% 0.0128 126.38)",
+          "oklch(63% 0.0128 126.38)",
+          "oklch(75% 0.0128 126.38)",
+          "oklch(87% 0.0128 126.38)",
+          "oklch(95% 0.0128 126.38)"
+        ]
+      },
+      "ink": {
+        "displayName": "Ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0209 159.11)",
+          "oklch(27% 0.0209 159.11)",
+          "oklch(39% 0.0209 159.11)",
+          "oklch(51% 0.0209 159.11)",
+          "oklch(63% 0.0209 159.11)",
+          "oklch(75% 0.0209 159.11)",
+          "oklch(87% 0.0209 159.11)",
+          "oklch(95% 0.0209 159.11)"
+        ]
+      },
+      "muted": {
+        "displayName": "Muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0235 145.24)",
+          "oklch(27% 0.0235 145.24)",
+          "oklch(39% 0.0235 145.24)",
+          "oklch(51% 0.0235 145.24)",
+          "oklch(63% 0.0235 145.24)",
+          "oklch(75% 0.0235 145.24)",
+          "oklch(87% 0.0235 145.24)",
+          "oklch(95% 0.0235 145.24)"
+        ]
+      },
+      "action": {
+        "displayName": "Action",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0755 161.98)",
+          "oklch(27% 0.0755 161.98)",
+          "oklch(39% 0.0755 161.98)",
+          "oklch(51% 0.0755 161.98)",
+          "oklch(63% 0.0755 161.98)",
+          "oklch(75% 0.0755 161.98)",
+          "oklch(87% 0.0755 161.98)",
+          "oklch(95% 0.0755 161.98)"
+        ]
+      },
+      "action-tint": {
+        "displayName": "Action Tint",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0169 137.03)",
+          "oklch(27% 0.0169 137.03)",
+          "oklch(39% 0.0169 137.03)",
+          "oklch(51% 0.0169 137.03)",
+          "oklch(63% 0.0169 137.03)",
+          "oklch(75% 0.0169 137.03)",
+          "oklch(87% 0.0169 137.03)",
+          "oklch(95% 0.0169 137.03)"
+        ]
+      },
+      "penalty": {
+        "displayName": "Penalty",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.1176 40.74)",
+          "oklch(27% 0.1176 40.74)",
+          "oklch(39% 0.1176 40.74)",
+          "oklch(51% 0.1176 40.74)",
+          "oklch(63% 0.1176 40.74)",
+          "oklch(75% 0.1176 40.74)",
+          "oklch(87% 0.1176 40.74)",
+          "oklch(95% 0.1176 40.74)"
+        ]
+      },
+      "penalty-tint": {
+        "displayName": "Penalty Tint",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0185 57.22)",
+          "oklch(27% 0.0185 57.22)",
+          "oklch(39% 0.0185 57.22)",
+          "oklch(51% 0.0185 57.22)",
+          "oklch(63% 0.0185 57.22)",
+          "oklch(75% 0.0185 57.22)",
+          "oklch(87% 0.0185 57.22)",
+          "oklch(95% 0.0185 57.22)"
+        ]
+      },
+      "sidebar": {
+        "displayName": "Sidebar",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0095 119.58)",
+          "oklch(27% 0.0095 119.58)",
+          "oklch(39% 0.0095 119.58)",
+          "oklch(51% 0.0095 119.58)",
+          "oklch(63% 0.0095 119.58)",
+          "oklch(75% 0.0095 119.58)",
+          "oklch(87% 0.0095 119.58)",
+          "oklch(95% 0.0095 119.58)"
+        ]
+      },
+      "nav-selected": {
+        "displayName": "Nav Selected",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0222 132.54)",
+          "oklch(27% 0.0222 132.54)",
+          "oklch(39% 0.0222 132.54)",
+          "oklch(51% 0.0222 132.54)",
+          "oklch(63% 0.0222 132.54)",
+          "oklch(75% 0.0222 132.54)",
+          "oklch(87% 0.0222 132.54)",
+          "oklch(95% 0.0222 132.54)"
+        ]
+      },
+      "avatar": {
+        "displayName": "Avatar",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0246 129.90)",
+          "oklch(27% 0.0246 129.90)",
+          "oklch(39% 0.0246 129.90)",
+          "oklch(51% 0.0246 129.90)",
+          "oklch(63% 0.0246 129.90)",
+          "oklch(75% 0.0246 129.90)",
+          "oklch(87% 0.0246 129.90)",
+          "oklch(95% 0.0246 129.90)"
+        ]
+      },
+      "avatar-ink": {
+        "displayName": "Avatar Ink",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0495 135.78)",
+          "oklch(27% 0.0495 135.78)",
+          "oklch(39% 0.0495 135.78)",
+          "oklch(51% 0.0495 135.78)",
+          "oklch(63% 0.0495 135.78)",
+          "oklch(75% 0.0495 135.78)",
+          "oklch(87% 0.0495 135.78)",
+          "oklch(95% 0.0495 135.78)"
+        ]
+      },
+      "avatar-alternate": {
+        "displayName": "Avatar Alternate",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0211 72.14)",
+          "oklch(27% 0.0211 72.14)",
+          "oklch(39% 0.0211 72.14)",
+          "oklch(51% 0.0211 72.14)",
+          "oklch(63% 0.0211 72.14)",
+          "oklch(75% 0.0211 72.14)",
+          "oklch(87% 0.0211 72.14)",
+          "oklch(95% 0.0211 72.14)"
+        ]
+      },
+      "done-border": {
+        "displayName": "Done Border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0486 136.56)",
+          "oklch(27% 0.0486 136.56)",
+          "oklch(39% 0.0486 136.56)",
+          "oklch(51% 0.0486 136.56)",
+          "oklch(63% 0.0486 136.56)",
+          "oklch(75% 0.0486 136.56)",
+          "oklch(87% 0.0486 136.56)",
+          "oklch(95% 0.0486 136.56)"
+        ]
+      },
+      "missed-border": {
+        "displayName": "Missed Border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0442 48.92)",
+          "oklch(27% 0.0442 48.92)",
+          "oklch(39% 0.0442 48.92)",
+          "oklch(51% 0.0442 48.92)",
+          "oklch(63% 0.0442 48.92)",
+          "oklch(75% 0.0442 48.92)",
+          "oklch(87% 0.0442 48.92)",
+          "oklch(95% 0.0442 48.92)"
+        ]
+      },
+      "input-border": {
+        "displayName": "Input Border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0174 128.68)",
+          "oklch(27% 0.0174 128.68)",
+          "oklch(39% 0.0174 128.68)",
+          "oklch(51% 0.0174 128.68)",
+          "oklch(63% 0.0174 128.68)",
+          "oklch(75% 0.0174 128.68)",
+          "oklch(87% 0.0174 128.68)",
+          "oklch(95% 0.0174 128.68)"
+        ]
+      },
+      "dues-divider": {
+        "displayName": "Dues Divider",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0292 60.74)",
+          "oklch(27% 0.0292 60.74)",
+          "oklch(39% 0.0292 60.74)",
+          "oklch(51% 0.0292 60.74)",
+          "oklch(63% 0.0292 60.74)",
+          "oklch(75% 0.0292 60.74)",
+          "oklch(87% 0.0292 60.74)",
+          "oklch(95% 0.0292 60.74)"
+        ]
+      },
+      "text-selection": {
+        "displayName": "Text Selection",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0427 132.22)",
+          "oklch(27% 0.0427 132.22)",
+          "oklch(39% 0.0427 132.22)",
+          "oklch(51% 0.0427 132.22)",
+          "oklch(63% 0.0427 132.22)",
+          "oklch(75% 0.0427 132.22)",
+          "oklch(87% 0.0427 132.22)",
+          "oklch(95% 0.0427 132.22)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Operational headline role from App.tsx."
+      },
+      "headline-mobile": {
+        "displayName": "Headline Mobile",
+        "purpose": "Operational headline mobile role from App.tsx."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Operational section role from App.tsx."
+      },
+      "challenge-title": {
+        "displayName": "Challenge Title",
+        "purpose": "Operational challenge title role from App.tsx."
+      },
+      "goal-title": {
+        "displayName": "Goal Title",
+        "purpose": "Operational goal title role from App.tsx."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Operational body role from App.tsx."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Operational label role from App.tsx."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Operational caption role from App.tsx."
+      },
+      "rule": {
+        "displayName": "Rule",
+        "purpose": "Operational rule role from App.tsx."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Operational button role from App.tsx."
+      },
+      "dues": {
+        "displayName": "Dues",
+        "purpose": "Operational dues role from App.tsx."
+      },
+      "ledger": {
+        "displayName": "Ledger",
+        "purpose": "Operational ledger role from App.tsx."
+      },
+      "progress": {
+        "displayName": "Progress",
+        "purpose": "Operational progress role from App.tsx."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "stacked-content",
+        "value": "1140px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary button translated from App.tsx React Native styles.",
+      "html": "<button class=\"ds-button-primary\">Save check-in</button>",
+      "css": ".ds-button-primary{font:600 13px system-ui,sans-serif;min-height:44px;padding:11px 18px;border:0;border-radius:8px;background:#276248;color:#FFFFFF}.ds-button-primary:hover,.ds-button-primary:active{opacity:.8}.ds-button-primary:disabled{opacity:.45}.ds-button-primary:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary button translated from App.tsx React Native styles.",
+      "html": "<button class=\"ds-button-secondary\">Save check-in</button>",
+      "css": ".ds-button-secondary{font:600 13px system-ui,sans-serif;min-height:44px;padding:11px 18px;border:0;border-radius:8px;background:#E7EFE4;color:#276248}.ds-button-secondary:hover,.ds-button-secondary:active{opacity:.8}.ds-button-secondary:disabled{opacity:.45}.ds-button-secondary:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    },
+    {
+      "name": "Labeled input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled input translated from App.tsx React Native styles.",
+      "html": "<label class=\"ds-field\">Challenge name<input class=\"ds-input\" placeholder=\"The November pact\"></label>",
+      "css": ".ds-field{display:grid;gap:8px;font:600 13px/20px system-ui,sans-serif;color:#202C25}.ds-input{font:14px system-ui,sans-serif;color:#202C25;background:#FFFFFF;border:1px solid #D9DFD3;border-radius:8px;min-height:46px;padding:12px 13px}.ds-input::placeholder{color:#647064}.ds-input:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    },
+    {
+      "name": "Selected navigation",
+      "kind": "nav",
+      "refersTo": "nav-selected",
+      "description": "Selected navigation translated from App.tsx React Native styles.",
+      "html": "<button class=\"ds-nav\" role=\"tab\" aria-selected=\"true\">Today</button>",
+      "css": ".ds-nav{font:700 14px system-ui,sans-serif;color:#276248;background:#E0E9DA;border:0;border-radius:8px;min-height:48px;padding:0 14px}.ds-nav:hover{background:#E7EFE4}.ds-nav:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    },
+    {
+      "name": "Workspace badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Workspace badge translated from App.tsx React Native styles.",
+      "html": "<span class=\"ds-badge\">Demo workspace</span>",
+      "css": ".ds-badge{display:inline-block;font:600 11px/17px system-ui,sans-serif;color:#276248;background:#E7EFE4;border-radius:20px;padding:5px 10px}"
+    },
+    {
+      "name": "Checklist panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Checklist panel translated from App.tsx React Native styles.",
+      "html": "<section class=\"ds-panel\">Your daily check-in</section>",
+      "css": ".ds-panel{font:600 17px system-ui,sans-serif;background:#FFFFFF;color:#202C25;border:1px solid #E3E7DE;border-radius:12px;padding:24px}"
+    },
+    {
+      "name": "Done goal choice",
+      "kind": "custom",
+      "refersTo": "goal-done",
+      "description": "Done goal choice translated from App.tsx React Native styles.",
+      "html": "<button class=\"ds-goal-done\" aria-pressed=\"true\">Done</button>",
+      "css": ".ds-goal-done{font:700 12px system-ui,sans-serif;min-height:44px;padding:0 13px;border:1px solid #BAD0B1;border-radius:7px;background:#E7EFE4;color:#276248}.ds-goal-done:hover{border-color:#276248}.ds-goal-done:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    },
+    {
+      "name": "Missed goal choice",
+      "kind": "custom",
+      "refersTo": "goal-missed",
+      "description": "Missed goal choice translated from App.tsx React Native styles.",
+      "html": "<button class=\"ds-goal-missed\" aria-pressed=\"true\">Missed</button>",
+      "css": ".ds-goal-missed{font:700 12px system-ui,sans-serif;min-height:44px;padding:0 13px;border:1px solid #E8C7B6;border-radius:7px;background:#FBEEE5;color:#A14F30}.ds-goal-missed:hover{border-color:#276248}.ds-goal-missed:focus-visible{outline:3px solid #276248;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Shared training log",
+    "overview": "A quiet, warm workspace makes a daily checklist and shared accountability ledger easy to scan. Forest green marks action and completion; terracotta explains fines and misses. Compact operational typography and simple bordered surfaces keep the task close.",
+    "keyCharacteristics": [
+      "Fast, reversible daily check-ins.",
+      "Explicit states and traceable money.",
+      "Shared React Native primitives, with Expo web as the shipping target."
+    ],
+    "rules": [
+      {
+        "name": "The Labeled State Rule",
+        "body": "Every goal choice retains its Done or Missed label; an unset choice remains Pending. Color supports the label.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Use borders and tonal backgrounds to separate surfaces; no shadows are shipped.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep check-in controls early on mobile and interactive targets at least 44px.",
+      "Do retain text labels, selected semantics and visible keyboard focus alongside color.",
+      "Do label synthetic demo data and manually recorded, unverified payments explicitly."
+    ],
+    "donts": [
+      "Don't add decorative gradients, glass or stock fitness photography.",
+      "Don't imply a payment transfers money or has been verified.",
+      "Don't mix local demo records with authenticated shared data."
+    ]
+  }
+}
